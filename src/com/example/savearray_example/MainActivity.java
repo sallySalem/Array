@@ -60,7 +60,8 @@ public class MainActivity extends ActionBarActivity {
 	@SuppressWarnings("unchecked")
 	protected ArrayList<String> readFromFile() {
 		ArrayList<String> data = new ArrayList<>();
-		File file = getFileStreamPath(fileName);
+//		File file = getFileStreamPath(fileName);
+		File file = new File("/sdcard/generated array.txt");
 	      try {
 	            if(file.exists()){
 	                  FileInputStream fis = openFileInput(fileName);
@@ -78,7 +79,8 @@ public class MainActivity extends ActionBarActivity {
 
 	protected void saveTofile(ArrayList<String> arrayOfString) {
 
-		File file = getFileStreamPath(fileName);
+//		File file = getFileStreamPath(fileName);
+		File file = new File("/sdcard/generated array.txt");
         try {
             if(file.exists() || file.createNewFile()){
                 FileOutputStream fos = openFileOutput(fileName, MODE_PRIVATE);
